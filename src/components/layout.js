@@ -4,13 +4,16 @@ import Header from './header.js'
 import Footer from './footer.js'
 
 import '../styles/index.scss'
+import layoutStyles from './layout.module.scss'
 
 
 export default function Layout(props) {
     return (
-        <div>
-            <Header />
-            {props.children}
+        <div className={layoutStyles.container}>
+            <div className={layoutStyles.content}>
+                <Header />
+                {props.children}
+            </div>
             <Footer />
         </div>
     )
